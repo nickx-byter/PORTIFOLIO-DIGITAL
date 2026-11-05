@@ -1,0 +1,95 @@
+:root{
+  --bg:#F5F7FA; --surface:#FFFFFF; --ink:#16202E; --muted:#5B6678;
+  --line:#DDE3EC; --accent:#2C4BFF; --accent-ink:#FFFFFF; --soft:#E8ECFF;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0F141C; --surface:#171E29; --ink:#E9EEF6; --muted:#9AA6B8;
+    --line:#263040; --accent:#7C93FF; --accent-ink:#0F141C; --soft:#1E2740;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{font:1rem/1.65 "Figtree",system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Bricolage Grotesque","Figtree",system-ui,sans-serif;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
+
+/* Topo */
+.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:64px}
+.brand{font:700 1.25rem "Bricolage Grotesque",sans-serif;text-decoration:none}
+.menu{display:flex;gap:.25rem;overflow-x:auto;scrollbar-width:none}
+.menu::-webkit-scrollbar{display:none}
+.menu a{padding:.4rem .75rem;border-radius:999px;text-decoration:none;color:var(--muted);font-weight:500;font-size:.95rem;white-space:nowrap;transition:background .15s,color .15s}
+.menu a:hover{color:var(--ink)}
+.menu a.ativo{background:var(--soft);color:var(--accent)}
+
+/* Apresentação */
+.hero{display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;padding:5rem 0 4.5rem}
+.hero h1{font-size:clamp(2.3rem,6vw,4.2rem);max-width:15ch}
+.hero p{margin-top:1.25rem;max-width:52ch;color:var(--muted);font-size:1.125rem}
+.acoes{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.25rem;border-radius:10px;font-weight:600;text-decoration:none;border:1.5px solid var(--line);background:var(--surface);transition:transform .15s,border-color .15s}
+.btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+.btn.primario{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.foto{width:240px;height:240px;border-radius:50%;object-fit:cover;border:6px solid var(--surface);box-shadow:0 0 0 2px var(--accent)}
+.foto.inicial{display:grid;place-items:center;background:var(--soft);color:var(--accent);font:700 5.5rem "Bricolage Grotesque",sans-serif}
+
+/* Seções */
+.bloco{padding:4.5rem 0;border-top:1px solid var(--line)}
+.bloco>.wrap{display:grid;grid-template-columns:220px 1fr;gap:2rem 3rem}
+.bloco h2{font-size:2rem}
+.bloco .sub{margin-top:.6rem;color:var(--muted);font-size:.95rem}
+.sobre p+p{margin-top:1rem}
+.sobre p{max-width:62ch}
+
+/* Habilidades */
+.grupo+.grupo{margin-top:1.75rem}
+.grupo h3{font-size:1.05rem;margin-bottom:.75rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none}
+.chips li{padding:.35rem .85rem;border-radius:999px;background:var(--surface);border:1px solid var(--line);font-size:.95rem;font-weight:500}
+
+/* Projetos */
+.projetos{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem}
+.projeto{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.projeto img{width:100%;aspect-ratio:16/9;object-fit:cover;border-bottom:1px solid var(--line)}
+.projeto .corpo{display:flex;flex-direction:column;gap:.75rem;padding:1.25rem;flex:1}
+.projeto h3{font-size:1.25rem}
+.projeto p{color:var(--muted);font-size:.97rem}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin-top:auto}
+.tags li{font-size:.8rem;font-weight:600;color:var(--accent);background:var(--soft);padding:.15rem .6rem;border-radius:6px}
+.links{display:flex;gap:1rem;font-weight:600;font-size:.95rem}
+.links a{color:var(--accent)}
+
+/* Certificados */
+.cert{display:grid;grid-template-columns:minmax(0,220px) 1fr;gap:1rem 2rem;padding:1.5rem 0;border-bottom:1px solid var(--line)}
+.cert:first-child{padding-top:0}
+.cert h3{font-size:1.15rem}
+.cert .onde{margin-top:.35rem;font-weight:600}
+.cert .quando{color:var(--muted);font-size:.9rem}
+.cert .aprendi{max-width:60ch}
+.cert .links{margin-top:.75rem}
+.cert .miniatura{display:block;margin-top:.9rem;max-width:260px}
+.cert .miniatura img{width:100%;border-radius:8px;border:1px solid var(--line)}
+
+/* Contato */
+.contatos{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem}
+.contato{display:flex;align-items:center;gap:1rem;padding:1.1rem 1.25rem;background:var(--surface);border:1px solid var(--line);border-radius:14px;text-decoration:none;transition:border-color .15s,transform .15s}
+.contato:hover{border-color:var(--accent);transform:translateY(-2px)}
+.contato svg{flex:none;width:28px;height:28px;color:var(--accent)}
+.contato strong{display:block}
+.contato span{color:var(--muted);font-size:.9rem}
+
+footer{padding:2rem 0 3rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding:3rem 0}
+  .foto{order:-1;width:160px;height:160px}
+  .foto.inicial{font-size:3.6rem}
+  .bloco{padding:3rem 0}
+  .bloco>.wrap{grid-template-columns:1fr}
+  .cert{grid-template-columns:1fr}
+}

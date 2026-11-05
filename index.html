@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nicolle Neiva — Portfólio</title>
+<meta name="description" content="Portfólio de Nicolle Neiva, estudante de Ciência da Computação">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <a class="brand" href="#inicio" id="marca">Nicolle Neiva</a>
+    <nav class="menu" aria-label="Seções">
+      <a href="#sobre">Sobre</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#formacao">Formação</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#certificados">Certificados</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="inicio" class="wrap hero">
+    <div>
+      <h1 id="titulo"></h1>
+      <p id="resumo"></p>
+      <div class="acoes">
+        <a class="btn primario" href="#projetos">Ver projetos</a>
+        <a class="btn" href="#contato">Falar comigo</a>
+      </div>
+    </div>
+    <div id="foto-area"></div>
+  </section>
+
+  <section id="sobre" class="bloco">
+    <div class="wrap">
+      <div><h2>Sobre mim</h2></div>
+      <div class="sobre" id="sobre-texto"></div>
+    </div>
+  </section>
+
+  <section id="habilidades" class="bloco">
+    <div class="wrap">
+      <div><h2>Habilidades</h2><p class="sub">O que eu uso para construir.</p></div>
+      <div id="habilidades-lista"></div>
+    </div>
+  </section>
+
+  <section id="formacao" class="bloco">
+    <div class="wrap">
+      <div><h2>Formação</h2><p class="sub">Minha trajetória acadêmica.</p></div>
+      <div id="formacao-lista"></div>
+    </div>
+  </section>
+
+  <section id="projetos" class="bloco">
+    <div class="wrap">
+      <div><h2>Projetos</h2><p class="sub">Trabalhos da faculdade e projetos pessoais.</p></div>
+      <div class="projetos" id="projetos-lista"></div>
+    </div>
+  </section>
+
+  <section id="certificados" class="bloco">
+    <div class="wrap">
+      <div><h2>Certificados</h2><p class="sub">O que aprendi em cada um e onde fiz.</p></div>
+      <div id="certificados-lista"></div>
+    </div>
+  </section>
+
+  <section id="contato" class="bloco">
+    <div class="wrap">
+      <div><h2>Contato</h2><p class="sub">Escolha o canal que preferir.</p></div>
+      <div class="contatos" id="contatos-lista"></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span id="rodape"></span></div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
