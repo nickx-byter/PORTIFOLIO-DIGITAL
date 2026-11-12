@@ -81,6 +81,15 @@ const DADOS = {
       link: "",                 
       imagem: "hardware.png"  
     
+    },
+    {
+      titulo: "Introdução à Cibersegurança",
+      emissor: "Onde consegui: Cisco Networking Academy",
+      data: "11/2026",
+      aprendi: "Aprendi os fundamentos da cibersegurança, incluindo ameaças e vulnerabilidades digitais. Essa base é essencial para entender como proteger sistemas e dados em ambientes modernos.",
+      link: "",                 
+      imagem: "ciber.png"  
+    
     }
   ]
 };
